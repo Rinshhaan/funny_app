@@ -10,6 +10,7 @@ const rangeBtn = document.getElementById('range-btn');
 const guessDiv = document.getElementById('guess-div');
 
 var isprocessing = false; // Stop if already running --no duplicates
+const successSound = new Audio('audio/success.mp3');
 
 function getRandomItem(arr) {
   // Generate a random index within the array's bounds
@@ -39,6 +40,7 @@ holdbtn.addEventListener('click',()=>{
             gaytext.textContent = 'Checking '+ nameInput.value+' is gay or not' ;
         },3000);
         setTimeout(()=>{
+            successSound.play();
             gaytext.classList.add('gay-reveal');
             gaytext.textContent = nameInput.value + ' is ' + randomGay;
             holdbtn.classList.remove('holdanim');
@@ -73,6 +75,7 @@ holdbtn.addEventListener('click',()=>{
             flameText.textContent = 'Checking '+ flameInput.value +' and ' + flameInput2.value + ' relationship' ;
         },3000);
         setTimeout(()=>{
+            successSound.play();
             flameText.classList.add('flame-reveal');
             flameText.classList.add('glow-anim');
             holdbtn.classList.remove('holdanim');
@@ -107,6 +110,7 @@ holdbtn.addEventListener('click',()=>{
             deathText.textContent = 'Going through '+ deathName.value +' life cycles.... ' ;
         },3000);
         setTimeout(()=>{
+            successSound.play();
             deathText.classList.add('flame-reveal');
             deathText.classList.add('glow-anim');
             holdbtn.classList.remove('holdanim');
