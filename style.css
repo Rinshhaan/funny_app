@@ -1,0 +1,151 @@
+/* INDEX SECTION */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#D8B5FF , #1EAE98);
+    min-height: 100vh;
+    height: 100%;
+}
+nav{
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1, .glowanime {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
+h3{
+  font-size: 1.7rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.All-games{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.game-card{
+  width: 90%;
+  height: 90vw;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.game-card .card-img{
+  overflow: hidden;
+}
+.card-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.card-description{
+  padding: 20px;
+}
+.play-btn{
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: green;
+}
+.play-btn:active{
+  background-color: greenyellow;
+}
+
+/* GAY GAME */
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.game-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  background-image: linear-gradient(#1EAE98 , #D8B5FF );
+}
+#p-div{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.gay-p{
+  color: rgb(0, 4, 255);
+}
+.gay-reveal{
+  color: red;
+  animation: pulse 0.8s infinite;
+  font-size: 1.8rem;
+}
+
+input{
+  padding: 10px;
+  border: 3px solid rgb(235, 235, 4);
+}
+
+#round{
+  margin-top: 35px;
+  height: 20vh;
+  width: 20vh;
+  background-color: red;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+#round:active{
+  background-color: green;
+}
+.holdanim{
+  color: green;
+  animation: pulse 0.8s infinite;
+}
+@keyframes pulse{
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+/* FLAME GAME AND DEATH GAME*/
+#love-img{
+  margin: 20px;
+  height: 60px;
+}
+.flame-p{
+  color: rgb(0, 4, 255);
+  animation: fade 0.8s infinite;
+}
+.flame-reveal{
+  color: red;
+  animation: pulse 0.8s infinite;
+  font-size: 1.8rem;
+}
+.glow-anim{
+  animation: glow 0.8s infinite;
+}
+
+/* NUMBER GUESS GAME */
+
