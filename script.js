@@ -22,7 +22,6 @@ function getRandomItem(arr) {
 
 //! GAY GAME
 const gayArr = ['Gay💅','Not Gay💪'];
-const randomGay = getRandomItem(gayArr);
 
 holdbtn.addEventListener('click',()=>{
     if(isprocessing) return;
@@ -42,7 +41,7 @@ holdbtn.addEventListener('click',()=>{
         setTimeout(()=>{
             successSound.play();
             gaytext.classList.add('gay-reveal');
-            gaytext.textContent = nameInput.value + ' is ' + randomGay;
+            gaytext.textContent = nameInput.value + ' is ' + getRandomItem(gayArr);
             holdbtn.classList.remove('holdanim');
             nameInput.value = '';
             isprocessing = false;
@@ -55,7 +54,6 @@ holdbtn.addEventListener('click',()=>{
 //! FALME GAME
 
 const flames = ['marriage👨‍⚖️👰','love💘','crush💖','couple💕','friends😉','enemies😡','one-sided😓','bestie🤩'];
-const randomflames = getRandomItem(flames);
 
 holdbtn.addEventListener('click',()=>{
     if(isprocessing) return;   // ⛔ Stop if already running -- initially false assinged
@@ -79,7 +77,7 @@ holdbtn.addEventListener('click',()=>{
             flameText.classList.add('flame-reveal');
             flameText.classList.add('glow-anim');
             holdbtn.classList.remove('holdanim');
-            flameText.textContent = randomflames;
+            flameText.textContent = getRandomItem(flames);
             isprocessing = false;
         },6000);
     }else{
